@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .slider {
+            position: relative;
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            border: none;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="1.jpg" alt="Image 1">
+            <img src="2.jpg" alt="Image 2">
+            <img src="3.jpg" alt="Image 3">
+            <img src="4.jpg" alt="Image 1">
+            <img src="5.jpg" alt="Image 2">
+            <img src="6.jpg" alt="Image 3">
+            <img src="7.jpg" alt="Image 1">
+            <img src="8.jpg" alt="Image 2">
+            <img src="9.jpg" alt="Image 3">
+            <img src="10.jpg" alt="Image 1">
+            <img src="11.jpg" alt="Image 2">
+            <img src="12.jpg" alt="Image 3">
+            <img src="13.jpg" alt="Image 1">
+            <img src="14.jpg" alt="Image 2">
+            <img src="15.jpg" alt="Image 3">
+            <img src="16.jpg" alt="Image 1">
+            <img src="17.jpg" alt="Image 2">
+            <img src="18.jpg" alt="Image 3">
+            <img src="19.jpg" alt="Image 1">
+            <img src="20.jpg" alt="Image 2">
+            <img src="21.jpg" alt="Image 3">
+            <img src="22.jpg" alt="Image 1">
+            <img src="23.jpg" alt="Image 2">
+            <img src="24.jpg" alt="Image 3">
+            <img src="25.jpg" alt="Image 1">
+            <img src="26.jpg" alt="Image 2">
+            <img src="27.jpg" alt="Image 3">
+            <img src="28.jpg" alt="Image 3">
+        </div>
+    </div>
+    <div class="navigation">
+        <button class="btn" onclick="showNextImage()">Keyingi</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
