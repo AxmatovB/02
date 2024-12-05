@@ -3,55 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .slider {
-            position: relative;
-            width: 60%;
-            margin: auto;
-            overflow: hidden;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background-color: #fff;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slides img {
-            width: 100%;
-            border: none;
-        }
-        .navigation {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Presentate</title>
+<style> .gallery { 
+            display: flex; flex-wrap: wrap; } 
+            .gallery img { 
+                margin: 5px; width: calc(100% / 5 -10px); }
+            </style>
 </head>
 <body>
-    <div class="slider">
-        <div class="slides">
+        <div class="gallery">
             <img src="1.jpg" alt="Image 1">
             <img src="2.jpg" alt="Image 2">
             <img src="3.jpg" alt="Image 3">
