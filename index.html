@@ -41,22 +41,5 @@
             <img src="27.jpg" alt="Image 3">
             <img src="28.jpg" alt="Image 3">
         </div>
-    </div>
-    <div class="navigation">
-        <button class="btn" onclick="showNextImage()">Keyingi</button>
-    </div>
-
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelector('.slides');
-        const images = document.querySelectorAll('.slides img');
-        const totalImages = images.length;
-
-        function showNextImage() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            const offset = -currentIndex * 100;
-            slides.style.transform = `translateX(${offset}%)`;
-        }
-    </script>
 </body>
 </html>
